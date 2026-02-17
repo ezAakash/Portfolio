@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>AY</h1>
+        <h1><span className='style'>//</span>AY</h1>
       </header>
         <main>
           <div className="inside-main">
@@ -40,10 +40,21 @@ function App() {
               <p>I'm a Full-Stack Engineer based Faridabad, India 🇮🇳</p>
               <p>If you need a reliable developer to join your team, I'm ready to dive in.</p>
               
-              <a className="button" href="">Connect</a>
-              <a className="button" href="">Send an email</a>
+              <div className="hero-actions">
+                <a className="button primary" href="#projects">
+                  See My Work
+                </a>
 
-              <p className="status"> Availabe for hire, let's talk!</p>
+                <a className="button secondary" href="/resume.pdf" download>
+                  Download Resume
+                </a>
+              </div>
+
+              <p className="status">
+                <span className="status-dot"></span>
+                Available for hire, let's talk!
+              </p>
+
             </section>
 
             <section className="skills-section">
@@ -53,7 +64,7 @@ function App() {
               </div>
             </section>
 
-            <section className="projects-section">
+            <section id="projects" className="projects-section">
               <h2>PROJECTS</h2>
               <div className="project-list">
                 {projectList}
@@ -86,6 +97,9 @@ function App() {
             </section>
           </div>
       </main>
+      <footer>
+        <p>Build with ❤️ by Aakash</p>
+      </footer>
       
     </>
   )
