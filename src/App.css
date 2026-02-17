@@ -1,0 +1,327 @@
+/*typography*/
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 20px;
+}
+
+
+h2 {
+    font-weight: 500;
+    font-size: 13px;
+    font-family: 'Geist', 'Geist fallback', sans-serif;
+    color: grey;
+
+    margin-bottom: 30px;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+}
+
+h2 span {
+    display: inline;
+}
+
+
+.profile {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+
+.name {
+    color: #F59E0B;
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    margin: 5px 0px;
+    padding: 10px 18px;
+    background-color: #111111;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 999px;
+    margin-right: 10px;
+}
+
+.status {
+  font-size: 14px;
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #22C55E; /* green */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2); 
+}
+
+/* layout of the page */
+
+header {
+    margin: 0px 40px;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+
+.inside-main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*skill section */ 
+
+section {
+    margin-bottom: 40px;
+}
+
+.hero-section {
+    width: 100%;
+}
+
+
+.skills-section {
+  width: 100%;
+  
+}
+
+.skill-category {
+  margin-bottom: 18px;
+  
+}
+
+
+.skill-category h3 {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;  /* vertical horizontal */
+  
+}
+
+
+.skill {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  padding: 8px 16px;        /* increase horizontal breathing */
+  border-radius: 999px;     /* perfect pill */
+
+  line-height: 1.11;           /* tight vertical alignment */
+
+}
+
+.frontend .skill {
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  color: #1D4ED8;
+}
+
+.backend .skill {
+  background: #ECFDF5;
+  border: 1px solid #D1FAE5;
+  color: #047857;
+}
+
+.devops .skill {
+  background: #F5F3FF;
+  border: 1px solid #EDE9FE;
+  color: #6D28D9;
+}
+
+
+.skill {
+  transition: all 0.25s ease;
+}
+
+
+.frontend .skill:hover, .backend .skill:hover, .devops .skill:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 6px rgba(152, 150, 150, 0.5);
+}
+
+.frontend .skill:hover {
+  background: #1D4ED8;
+  color: white;
+}
+
+.backend .skill:hover {
+  background: #047857;
+  color: white;
+}
+
+.devops .skill:hover {
+  background: #6D28D9;
+  color: white;
+}
+
+
+/* project section */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+
+}
+
+.project {
+  padding: 20px 22px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.project p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0;
+}
+
+
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+
+.status-badge.active {
+  background: #ECFDF5;
+  color: #047857;
+}
+
+.status-badge.indevelopment {
+  background: #FEF3C7;
+  color: #B45309;
+}
+
+.status-badge.archived {
+  background: #EFF6FF;
+  color: #1D4ED8;
+}
+
+
+
+.project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Find me on section */
+.findme-section h2{
+    margin-bottom: 25px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #6B7280;
+  margin-bottom: 16px;
+}
+
+.findme-subtext {
+  font-size: 0.9rem;
+  color: #4B5563;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  text-decoration: none;
+  background: #F3F4F6;
+  color: #111827;
+
+  border: 1px solid #E5E7EB;
+  transition: all 0.2s ease;
+}
+
+.social-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.linkedin {
+  background: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #DBEAFE;
+}
+
+.twitter {
+  background: #F0F9FF;
+  color: #0284C7;
+  border: 1px solid #BAE6FD;
+}
+
+.threads {
+  background: #F3F4F6;
+  color: #111827;
+  border: 1px solid #E5E7EB;
+}
+
+
+
+
+
+
+
+
+
+
+
