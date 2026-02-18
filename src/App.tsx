@@ -66,7 +66,7 @@ function App() {
             <section className="hero-section">
               <img className="profile" src={profile} alt="Aakash Yadav" />
               <h1>Hey,I'm <span className="name">Aakash Yadav</span>!</h1>
-              <p>I'm a Full-Stack Engineer based Faridabad, India 🇮🇳</p>
+              <p>I'm a Final year CS undergrad and Full-Stack Engineer based Faridabad, India 🇮🇳</p>
               <p>If you need a reliable developer to join your team, I'm ready to dive in.</p>
               
               <div className="hero-actions">
