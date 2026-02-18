@@ -8,18 +8,23 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     slug: "frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "HTML/CSS"],
+    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "StreamLit"],
   },
   {
     title: "Backend",
     slug: "backend",
-    skills: ["Node.js", "Python", "PostgreSQL", "Redis", "GraphQL", "REST APIs"],
+    skills: ["Node.js","Express", "FastAPI",  "Python", "PostgreSQL", "REST APIs"],
   },
   {
     title: "Tools & DevOps",
     slug: "devops",
-    skills: ["Git", "Docker", "AWS", "Vercel", "CI/CD", "Linux"],
+    skills: ["Git", "Docker","Vercel", "CI/CD", "Linux"],
   },
+  {
+    title: "Generative AI",
+    slug: "generative-ai",
+    skills: ["LangChain", "Hugging Face"]
+  }
 ];
 
 export type ProjectStatus = "Active" | "InDevelopment" | "Archived";
@@ -33,8 +38,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "SaaS Dashboard",
-    description: "Analytics dashboard for tracking user engagement and revenue metrics.",
+    name: "Avni Recruitmet Agent ",
+    description: " Helps candidates prepare better for the interviews and helps recuiters find the best candidates for their open positions.",
     status: "Active",
 
     url: "#",
@@ -58,19 +63,5 @@ export const projects: Project[] = [
     status: "InDevelopment",
 
     url: "#",
-  },
-  {
-    name: "Auth Service",
-    description: "Lightweight authentication microservice with OAuth and JWT support.",
-    status: "Active",
-
-    url: "#",
-  },
-  {
-    name: "API Gateway",
-    description: "Rate-limited API gateway with caching, logging, and request routing.",
-    status: "Archived",
-
-    url: "#",
-  },
+  }
 ];
