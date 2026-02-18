@@ -29,9 +29,16 @@ h2 span {
 
 .profile {
     display: block;
-    width: 84px;
-    height: 84px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .profile {
+        width: 128px;
+        height: 128px;
+    }
 }
 
 
@@ -135,6 +142,10 @@ h2 span {
 
 /* layout of the page */
 
+header {
+    border: 1px solid #E5E7EB;
+    margin-bottom: 40px;
+}
 
 header span.style {
     color: #F59E0B;
