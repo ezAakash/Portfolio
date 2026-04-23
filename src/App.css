@@ -147,8 +147,51 @@ h2 span {
 /* layout of the page */
 
 header {
-  border: 1px solid #E5E7EB;
+  border-bottom: 1px solid #E5E7EB;
   margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.header-container h1 {
+  margin: 0;
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  color: #4B5563;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: #F3F4F6;
+  color: #111827;
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
 }
 
 header span.style {
@@ -590,4 +633,214 @@ footer {
 
 .easter-egg:hover svg {
   transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+.dark header {
+  border-bottom-color: #374151;
+  background: rgba(15, 17, 21, 0.85);
+}
+
+.dark .theme-toggle {
+  color: #9CA3AF;
+}
+
+.dark .theme-toggle:hover {
+  background: #374151;
+  color: #F9FAFB;
+}
+
+.dark h2 {
+  color: #9CA3AF;
+}
+
+.dark .skill-category h3 {
+  color: #F9FAFB;
+}
+
+.dark .project {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.dark .project h3 {
+  background: linear-gradient(135deg, #60A5FA, #A78BFA, #F472B6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .project p {
+  color: #D1D5DB;
+}
+
+.dark .project-link {
+  background: #374151;
+  color: #F9FAFB;
+  border-color: #4B5563;
+}
+
+.dark .project-link:hover {
+  background: #4B5563;
+}
+
+.dark .project:hover {
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+.dark .status-badge.active {
+  background: rgba(4, 120, 87, 0.2);
+  color: #6EE7B7;
+}
+
+.dark .status-badge.indevelopment {
+  background: rgba(180, 83, 9, 0.2);
+  color: #FCD34D;
+}
+
+.dark .status-badge.archived {
+  background: rgba(29, 78, 216, 0.2);
+  color: #93C5FD;
+}
+
+.dark .button.primary {
+  background: #F9FAFB;
+  color: #111827;
+}
+
+.dark .button.primary:hover {
+  background: #2563EB;
+  color: #FFFFFF;
+}
+
+.dark .button.secondary {
+  border-color: #4B5563;
+  color: #F9FAFB;
+}
+
+.dark .button.secondary:hover {
+  background: #374151;
+}
+
+.dark .status {
+  color: #D1D5DB;
+}
+
+.dark .section-label {
+  color: #9CA3AF;
+}
+
+.dark .findme-subtext {
+  color: #D1D5DB;
+}
+
+.dark .social-pill {
+  background: #1f2937;
+  color: #F9FAFB;
+  border-color: #374151;
+}
+
+.dark .social-pill.linkedin {
+  background: rgba(29, 78, 216, 0.2);
+  border-color: rgba(29, 78, 216, 0.5);
+  color: #60A5FA;
+}
+
+.dark .social-pill.twitter {
+  background: rgba(2, 132, 199, 0.2);
+  border-color: rgba(2, 132, 199, 0.5);
+  color: #38BDF8;
+}
+
+.dark .social-pill.threads {
+  background: #374151;
+  color: #F9FAFB;
+  border-color: #4B5563;
+}
+
+.dark .social-pill.github {
+  background: #374151;
+  color: #F9FAFB;
+  border-color: #4B5563;
+}
+
+.dark .contact-box {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.dark .contact-box p {
+  color: #D1D5DB;
+}
+
+.dark footer {
+  border-color: #374151;
+  color: #9CA3AF;
+}
+
+.dark .easter-egg {
+  background: #1f2937;
+  color: #F9FAFB;
+  border-color: #374151;
+}
+
+.dark .easter-egg:hover {
+  color: #60A5FA;
+  border-color: #60A5FA;
+}
+
+.dark .frontend .skill {
+  background: rgba(29, 78, 216, 0.2);
+  border-color: rgba(29, 78, 216, 0.4);
+  color: #93C5FD;
+}
+
+.dark .backend .skill {
+  background: rgba(4, 120, 87, 0.2);
+  border-color: rgba(4, 120, 87, 0.4);
+  color: #6EE7B7;
+}
+
+.dark .devops .skill {
+  background: rgba(109, 40, 217, 0.2);
+  border-color: rgba(109, 40, 217, 0.4);
+  color: #C4B5FD;
+}
+
+.dark .generative-ai .skill {
+  background: rgba(180, 83, 9, 0.2);
+  border-color: rgba(180, 83, 9, 0.4);
+  color: #FCD34D;
+}
+
+.dark .database .skill {
+  background: rgba(225, 29, 72, 0.2);
+  border-color: rgba(225, 29, 72, 0.4);
+  color: #FDA4AF;
+}
+
+.dark .frontend .skill:hover {
+  background: #1D4ED8;
+  color: white;
+}
+
+.dark .backend .skill:hover {
+  background: #047857;
+  color: white;
+}
+
+.dark .devops .skill:hover {
+  background: #6D28D9;
+  color: white;
+}
+
+.dark .generative-ai .skill:hover {
+  background: #B45309;
+  color: white;
+}
+
+.dark .database .skill:hover {
+  background: #E11D48;
+  color: white;
 }

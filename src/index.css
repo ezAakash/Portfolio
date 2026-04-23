@@ -13,8 +13,15 @@ body {
   margin: 0px;
   font-family: 'Geist Mono', sans-serif;
   background: #ffffff;
+  color: #111827;
   position: relative;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background: #0f1115;
+  color: #f3f4f6;
 }
 
 body::before {
@@ -35,6 +42,16 @@ body::before {
   );
 
   z-index: -1;
+}
+
+body.dark::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
+    rgba(245, 158, 11, 0.15) 0%,   /* Amber */
+    rgba(225, 29, 72, 0.12) 25%,   /* Rose */
+    rgba(37, 99, 235, 0.1) 55%,   /* Blue */
+    transparent 80%
+  );
 }
 
 .toast {
