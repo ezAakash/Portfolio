@@ -12,50 +12,52 @@ h1 {
 
 
 h2 {
-    font-weight: 500;
-    font-size: 13px;
-    font-family: 'Geist', 'Geist fallback', sans-serif;
-    color: grey;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: 'Geist', 'Geist fallback', sans-serif;
+  color: grey;
 
-    margin-bottom: 30px;
-    letter-spacing: 0.24px;
-    text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
 }
 
 h2 span {
-    display: inline;
+  display: inline;
 }
 
 
 .profile {
-    display: block;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
+  display: block;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
 }
 
 @media (min-width: 768px) {
-    .profile {
-        width: 128px;
-        height: 128px;
-    }
+  .profile {
+    width: 128px;
+    height: 128px;
+  }
 }
 
 
 .name {
-    color: #F59E0B;
-    text-decoration: underline;
+  color: #F59E0B;
+  text-decoration: underline;
 }
 
 .hero-actions {
   display: flex;
-  flex-direction: column;   /* mobile */
+  flex-direction: column;
+  /* mobile */
   gap: 12px;
 }
 
 @media (min-width: 640px) {
   .hero-actions {
-    flex-direction: row;   /* desktop */
+    flex-direction: row;
+    /* desktop */
   }
 }
 
@@ -129,10 +131,12 @@ h2 span {
     transform: scale(1);
     opacity: 0.6;
   }
+
   70% {
     transform: scale(2.2);
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
@@ -143,14 +147,14 @@ h2 span {
 /* layout of the page */
 
 header {
-    border: 1px solid #E5E7EB;
-    margin-bottom: 40px;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 40px;
 }
 
 header span.style {
-    color: #F59E0B;
-    font-weight: 700;
-    letter-spacing: -0.01em;
+  color: #F59E0B;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .container {
@@ -164,19 +168,19 @@ header span.style {
 
 
 .inside-main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 
-/*skill section */ 
+/*skill section */
 
 section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .hero-section {
-    width: 100%;
+  width: 100%;
 }
 
 .hero-section p {
@@ -188,12 +192,12 @@ section {
 
 .skills-section {
   width: 100%;
-  
+
 }
 
 .skill-category {
   margin-bottom: 18px;
-  
+
 }
 
 
@@ -208,8 +212,9 @@ section {
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 14px;  /* vertical horizontal */
-  
+  gap: 12px 14px;
+  /* vertical horizontal */
+
 }
 
 
@@ -218,10 +223,13 @@ section {
   font-size: 0.85rem;
   font-weight: 500;
 
-  padding: 8px 16px;        /* increase horizontal breathing */
-  border-radius: 999px;     /* perfect pill */
+  padding: 8px 16px;
+  /* increase horizontal breathing */
+  border-radius: 999px;
+  /* perfect pill */
 
-  line-height: 1.11;           /* tight vertical alignment */
+  line-height: 1.11;
+  /* tight vertical alignment */
 
 }
 
@@ -249,14 +257,23 @@ section {
   color: #B45309;
 }
 
+.database .skill {
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  color: #E11D48;
+}
+
 
 .skill {
   transition: all 0.25s ease;
 }
 
 
-.frontend .skill:hover, .backend .skill:hover, .devops .skill:hover,
-.generative-ai .skill:hover {
+.frontend .skill:hover,
+.backend .skill:hover,
+.devops .skill:hover,
+.generative-ai .skill:hover,
+.database .skill:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(152, 150, 150, 0.5);
 }
@@ -268,6 +285,11 @@ section {
 
 .backend .skill:hover {
   background: #047857;
+  color: white;
+}
+
+.database .skill:hover {
+  background: #E11D48;
   color: white;
 }
 
@@ -288,7 +310,8 @@ section {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;  /* default mobile */
+  grid-template-columns: 1fr;
+  /* default mobile */
   gap: 24px;
   margin-top: 40px;
 }
@@ -363,9 +386,39 @@ section {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #111827;
+  background: #F3F4F6;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+  border: 1px solid #E5E7EB;
+}
+
+.project-link:hover {
+  background: #E5E7EB;
+  transform: translateY(-1px);
+}
+
+.project-link svg {
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover svg {
+  transform: translate(2px, -2px);
+}
+
 /* Find me on section */
-.findme-section h2{
-    margin-bottom: 25px;
+.findme-section h2 {
+  margin-bottom: 25px;
 }
 
 .section-label {
@@ -440,23 +493,101 @@ section {
 
 
 .getintouch {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: #F9FAFB;
+  padding: 24px 30px;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 40px;
+}
+
+.contact-box p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #4B5563;
+  font-weight: 500;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #111827;
+  color: white;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link:hover {
+  background: #2563EB;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+.contact-link svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover svg {
+  transform: scale(1.1) rotate(5deg);
 }
 
 footer {
-
-    border: 1px solid #E5E7EB;
-    text-align: center;
-    margin-top: 0px;
-    color: #6B7280;
+  border: 1px solid #E5E7EB;
+  text-align: center;
+  margin-top: 0px;
+  color: #6B7280;
 }
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
 
+.easter-egg {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  color: #111827;
+  border: 2px solid #E5E7EB;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: float 3s ease-in-out infinite;
+}
 
+.easter-egg:hover {
+  transform: scale(1.15) translateY(-5px);
+  color: #2563EB;
+  border-color: #2563EB;
+  animation-play-state: paused;
+}
 
+.easter-egg svg {
+  transition: transform 0.3s ease;
+}
 
-
-
-
-
-
+.easter-egg:hover svg {
+  transform: scale(1.1);
+}
