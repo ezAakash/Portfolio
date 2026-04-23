@@ -35,9 +35,9 @@ body::before {
 
   background: radial-gradient(
     800px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
-    rgba(245, 158, 11, 0.12) 0%,   /* Amber (from Name) */
-    rgba(225, 29, 72, 0.08) 25%,   /* Rose (from Database) */
-    rgba(37, 99, 235, 0.05) 55%,   /* Blue (from Frontend) */
+    rgba(245, 158, 11, 0.10) 0%,   /* Amber – warm core */
+    rgba(244, 63, 94, 0.06) 30%,   /* Rose – soft blush */
+    rgba(139, 92, 246, 0.04) 55%,  /* Lavender – subtle fade */
     transparent 80%
   );
 
@@ -47,9 +47,9 @@ body::before {
 body.dark::before {
   background: radial-gradient(
     800px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh),
-    rgba(245, 158, 11, 0.15) 0%,   /* Amber */
-    rgba(225, 29, 72, 0.12) 25%,   /* Rose */
-    rgba(37, 99, 235, 0.1) 55%,   /* Blue */
+    rgba(99, 102, 241, 0.18) 0%,   /* Indigo – cool techy core */
+    rgba(139, 92, 246, 0.12) 30%,  /* Violet – smooth mid-tone */
+    rgba(20, 184, 166, 0.06) 55%,  /* Teal – ambient edge */
     transparent 80%
   );
 }

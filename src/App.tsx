@@ -68,15 +68,35 @@ function App() {
 
 
   useEffect(() => {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = mouseX;
+    let currentY = mouseY;
+    let animationId: number;
+
     const handleMouseMove = (e: MouseEvent) => {
-      document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
-      document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    const animate = () => {
+      // Lerp factor — lower = slower trailing
+      const factor = 0.04;
+      currentX += (mouseX - currentX) * factor;
+      currentY += (mouseY - currentY) * factor;
+
+      document.body.style.setProperty('--mouse-x', `${currentX}px`);
+      document.body.style.setProperty('--mouse-y', `${currentY}px`);
+
+      animationId = requestAnimationFrame(animate);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
+    animationId = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationId);
     };
   }, []);
 
