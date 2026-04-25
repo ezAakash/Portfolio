@@ -226,10 +226,7 @@ function App() {
                 Threads
               </a>
 
-              <a href="https://linkedin.com" onClick={(e) => {
-                e.preventDefault();
-                showToast("This feature is under development. Coming soon 🚧");
-              }} target="_blank" rel="noopener noreferrer" className="social-pill linkedin">
+              <a href="https://www.linkedin.com/in/aakashwhobuilds/" target="_blank" rel="noopener noreferrer" className="social-pill linkedin">
                 LinkedIn
               </a>
             </div>
