@@ -665,7 +665,7 @@ footer {
 }
 
 .dark .project h3 {
-  background: linear-gradient(135deg, #60A5FA, #A78BFA, #F472B6);
+  background: linear-gradient(135deg, #F9FAFB, #9CA3AF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
