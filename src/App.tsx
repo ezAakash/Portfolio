@@ -178,7 +178,7 @@ function App() {
                 See My Work
               </a>
 
-              <a className="button secondary" onClick={playClickSound} href="/hireMe.pdf" target="_blank" rel="noopener noreferrer">
+              <a className="button secondary" onClick={playClickSound} href="/001aakashyadav.pdf" target="_blank" rel="noopener noreferrer">
                 Download Resume
               </a>
             </div>
